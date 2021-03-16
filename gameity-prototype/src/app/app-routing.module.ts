@@ -8,7 +8,7 @@ import { GamesComponent } from './games/games.component';
 import { CharitiesComponent } from './charities/charities.component';
 
 const routes: Routes = [
-  {path : '/', component: HomeComponent },
+  {path : '', component: HomeComponent },
   {path : 'charities', component: CharitiesComponent },
   {path : 'games', component: GamesComponent},
   {path : 'stats', component: StatBoardComponent },
