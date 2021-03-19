@@ -1,7 +1,7 @@
 .mySlides {
     display:none;
 }
-img{
+.view{
     width: 100%;
     min-height: 818px;
     max-height: 818px;
@@ -9,4 +9,57 @@ img{
 }
 .carousel-control{
     opacity: 0;
+}
+
+// Abpout Me Cards
+#main{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    background: navy;
+}
+.box{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    transition: 0.5s;
+}
+.box:hover{
+    height: 400px;
+}
+.box .imgBx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.box .imgBx img{
+    max-width: 100%;
+    opacity: 0.1;
+    transition: 0.5;
+}
+.box:hover .imgBx img{
+    opacity: 1;
+}
+.box:before{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    bottom: -2px;
+    right: -2px;
 }
