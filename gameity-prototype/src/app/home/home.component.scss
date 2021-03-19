@@ -17,50 +17,28 @@
 // content container
 .about-container{
 	width:80%;
-	height:330px;
-	background:#ffffff;
-	border-radius:20px;
+	background:#fff;
+    color: #000;
 	box-shadow:2px 2px 12px rgba(0,0,0,0.2);
 	display: flex;
 	margin: 7% auto 20px auto;
-	position: relative;
-	justify-content:space-evenly;
+    padding: 5%;
 	align-items: center;
+    .about-text{
+        width: 80%;
+        font-size: 20px;
+    }
+    // .about-text button{
+    //     width:120px;
+    //     height: 40px;
+    //     color:#ffffff;
+    //     outline:none;
+    //     border:none;
+    //     font-family: calibri;
+    //     background-color:#f54949;
+    // }
+    
 }
-
-.about-text{
-	width:500px;
-} 
-.about-text p:nth-child(1){
-	color:#403e3e;
-	font-family: myriad pro;
-	font-weight:bold;
-	font-size:23px;
-	line-height:0px;
-}
-.about-text p:nth-child(2){
-	color:#3e3d3d;
-	font-size:13px;
-	font-family: myriad pro;
-	font-weight:bold;
-	line-height:5px;
-}
-.about-text p:nth-child(3),.about-text p:nth-child(4){
-	color:#7e7d7d;
-	font-family:calibri;
-	font-size:16px;
-}
-.about-text button{
-	width:120px;
-	height: 40px;
-	color:#ffffff;
-	outline:none;
-	border:none;
-	font-family: calibri;
-	background-color:#f54949;
-}
-
-
 
 
 // Abpout Me Cards
