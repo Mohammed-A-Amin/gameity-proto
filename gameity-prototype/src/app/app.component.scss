@@ -2,7 +2,7 @@
 .nav {
     margin: 0;
     padding: 0;
-    background-color: #24252A;
+    background-color: #000;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -44,15 +44,67 @@ li, a, button{
     color: #f54949;
 }
 
-button {
-    padding: 9px 25px;
-    background-color: rgba(245, 73, 73);
+button{
+	width:120px;
+	height: 40px;
+	color:#ffffff;
+	outline:none;
     border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
+	border-radius: 0px;
+	font-family: calibri;
+	background-color:#f54949;
 }
 
 button:hover{
     background-color: #f54949;
+}
+
+.social-icons a{
+	width:40px;
+	height:40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color:#e6e3e3;
+	margin:20px 10px;
+	border-radius:50%;
+}
+.social-icons{
+	display: flex;
+	
+}
+
+.social-icons a:hover i,
+.social a:hover i{
+	color:#FFFFFF;
+	transition:all ease 0.5s;
+}
+
+.social{
+	position: fixed;
+	top:50%;
+	right:0px;
+	transform:translateY(-50%);
+    z-index: 7;
+}
+.social a{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width:50px;
+	height:50px;
+	margin:0px;
+	padding: 0px;
+	line-height:0px;
+	background-color:#000;
+	
+	box-shadow:2px 2px 12px rgba(0,0,0,0.2);
+}
+.social a:hover{
+	background-color:#f54949;
+	transition:all ease 0.5s;
+}
+.social i{
+	font-size:20px;
+	color:#fff;
 }
