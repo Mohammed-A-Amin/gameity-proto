@@ -1,5 +1,6 @@
 $border-radius-size: 14px;
 $red: #f54949;
+// https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/archer-bg.jpg
 
 .container{
   color: black;
@@ -8,13 +9,15 @@ $red: #f54949;
 // universal properties
 .game-card {
   background: white;
-  width: 300px;
+  width: 400px;
+  min-height: 700px;
+  max-height: 700px;
   display: block;
   float: left;
   border-radius: $border-radius-size;
   text-align: center;
   box-shadow: -1px 15px 30px -12px black;
-  margin: 100px;
+  margin: 100px 50px;
 }
 .card-bg {
   height: 230px;
@@ -22,87 +25,62 @@ $red: #f54949;
   border-top-left-radius: $border-radius-size;
   border-top-right-radius: $border-radius-size;
 }
-      // Background for Image
-      .val-bg{
-        background: black;
-        img {
-          width: 300px;
 
-        }
-      }
-      .clash-card__image--archer {
-        background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/archer-bg.jpg');
-        img {
-          width: 400px;
+// Background Image (Head of Card)
+.card-bg{
+  background:  url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/archer-bg.jpg');
+  background-size: cover;
+  text-align: center;
+  justify-content: center;
+  img {
+    width: 300px;
+  }
+}
 
-        }
-      }
-
-
-
-.clash-title {
+// Body of Card
+.card-title {
   font-size: 26px;
   color: black;
   font-weight: 900;
   margin-bottom: 5px;
 }
-
 .card-description {
   padding: 20px;
-  margin-bottom: 10px;
   color: black;
 }
 
-.clash-card__unit-stats--barbarian {
-  background: $red;
-  
-  .one-third {
-     border-right: 1px solid #BD7C2F;
-  }
-}
-
-.clash-card__unit-stats--archer {
-  background: $red;
-  
-  .one-third {
-     border-right: 1px solid #D04976;
-  }
-}
-
-
-.clash-card__unit-stats {
-  
+// Footer of Card
+.card-stats {
+  background-color: $red !important;
   color: white;
   font-weight: 700;
   border-bottom-left-radius: $border-radius-size;
   border-bottom-right-radius: $border-radius-size;
-  
+  display: flex;
+  min-height: 100px;
   .one-third {
+    background-color: $red;
+    border-right: 1px solid black;
     width: 33%;
     float: left;
     padding: 20px 15px;
-  }
-  
-  sup {
-    position: absolute;
-    bottom: 4px; 
-    font-size: 45%;
-    margin-left: 2px;
-  }
-  
-  .stat {
-    position: relative;
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .stat-value {
+  }  
+  .stat-name {
     text-transform: uppercase;
     font-weight: 400;
     font-size: 12px;
   }
-
-  .no-border {
+  .stat-value {
+    color: pink;
+    position: relative;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .left-third  {
+    border-bottom-left-radius: $border-radius-size;
+  }
+  .right-third {
     border-right: none;
+    border-bottom-right-radius: $border-radius-size;
   }
 }
