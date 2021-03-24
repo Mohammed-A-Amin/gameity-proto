@@ -11,10 +11,10 @@ const ContactForm = new mongoose.Schema({
 
 }, { timestamps: true });
 
-// we use mongoose tro make journalModel available as a Model
+// we use mongoose tro make ContactFormModule available as a Model
 // this will genereate collection names
-// journalModel is an instance of Journal
-// we are also telling it to save all our data incoming in journal-seals collection in MongoDB
+// ContactFormModule is an instance of ContactForm
+// we are also telling it to save all our data incoming in contact-forms collection in MongoDB
 const ContactFormModel = mongoose.model('contact-forms', ContactForm);
 
 module.exports = ContactFormModel
