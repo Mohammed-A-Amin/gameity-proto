@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 
 // Models
 const ContactForm = require('./models/contact-form');
+const UserInfo = require('./models/user-info');
 
 const port = process.env.PORT || 8080;
 const mongoUri = process.env.URI;
@@ -33,6 +34,7 @@ server.get('/', (req, res) => {
     console.log('Server OK');
 });
 
+// Contact Page
 server.post('/create-contact-form', (req, res) => {
     const incomingData = req.body;
     const newContactForm = new ContactForm(incomingData);
@@ -50,6 +52,57 @@ server.post('/create-contact-form', (req, res) => {
             document: doc
         });
     });
+});
+
+
+// Stats Page
+server.get('/get-all-users', (req, res) => {
+    UserInfo.find({}, (err, users) =>{
+        if(err) {
+            res.status(500).send({
+                status: 500,
+                msg: 'No Users Available.'
+            });
+        }
+        res.status(200).send(users)
+    })
+    
+});
+server.post('/add-one-user', (req, res) => {
+    const incomingData = req.body;
+    const newUserInfo = new UserInfo(incomingData);
+
+    newUserInfo.save((err, doc) => {
+        if (err) {
+            res.status(500).send({
+                err: err,
+                message: 'Error Occured. Could not create User. Sorry.'
+            });
+        };
+
+        res.status(200).send({
+            message: 'User was successfully created.',
+            document: doc
+        });
+    });
+});
+server.post('/add-many-users', (req, res) => {
+    // after making the request in postman, you will call data in body 
+    const incomingData = req.body.users;
+    // calling journal model with insertMany property
+    UserInfo.insertMany( incomingData, (err, doc) =>{
+        if(err) {
+            res.status(500).send({
+                status:500,
+                msg: 'Could not add the multiple users.'
+            });
+        }
+        res.status(200).send({
+            status:200,
+            msg: 'Successfully created multiple users at once!',
+            document: doc
+        });
+    }); 
 });
 
 // Listening on Port 8080
