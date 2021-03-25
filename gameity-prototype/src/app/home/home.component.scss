@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
 .mySlides {
     display:none;
 }
@@ -27,6 +29,10 @@
     .about-text{
         width: 80%;
         font-size: 20px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    p{
+        font-family: 'Montserrat', sans-serif;
     }
     // .about-text button{
     //     width:120px;
@@ -53,6 +59,7 @@
     align-items: center;
     flex-wrap: wrap;
     min-height: 100vh;
+    
 }
 
 .box{
@@ -65,6 +72,7 @@
     margin: 100px;
     background: #060C21;
     transition: 0.5s;
+    
 }
 .box:hover{
     height: 710px;
@@ -116,6 +124,9 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    background: url(https://steamuserimages-a.akamaihd.net/ugc/931562843186439042/AA7746A03D70CFFBE6AB6F87B45DD3EB0ED6B1C9/);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .box:before,
@@ -142,4 +153,20 @@
 .box:hover .content 
 {
     opacity: 1;
+}
+
+
+p{
+    font-family: 'Monsterrat'
+}
+
+
+.gameitycharity{
+    width: 80%;
+    display: block;
+    border-radius: 100px;
+}
+
+.founders{
+    width: 40%;
 }
