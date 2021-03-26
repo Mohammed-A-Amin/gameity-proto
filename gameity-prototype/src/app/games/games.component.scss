@@ -103,3 +103,12 @@ $red: #f54949;
     border-bottom-right-radius: $border-radius-size;
   }
 }
+
+@media screen and (max-width: 752px) {
+  .spacing{
+    height: 180px;
+  }
+  .game-card{
+    float: none;
+  }
+}

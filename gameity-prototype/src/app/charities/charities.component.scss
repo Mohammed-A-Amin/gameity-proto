@@ -206,3 +206,10 @@ $cubic-slow: cubic-bezier(0.7, 0.01, 0.37, 1);
   }
 }
 // End of floating card itself
+
+@media screen and (max-width: 752px) {
+  .spacing{
+    height: 150px;
+  }
+  
+}

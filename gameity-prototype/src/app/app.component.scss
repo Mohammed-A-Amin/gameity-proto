@@ -13,7 +13,7 @@
     z-index: 10;
 }
 
-li, a, button{
+ a, button{
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -30,16 +30,16 @@ li, a, button{
     list-style: none;
 }
 
-.nav-link li {
+.nav-link a {
     display: inline-block;
     padding: 25px 20px 0px 20px;
 }
 
-.nav-link li a {
+.nav-link a {
     transition: all 0.3s ease 0s;
 }
 
-.nav-link li a:hover{
+.nav-link a:hover{
     color: #f54949;
 }
 
@@ -108,18 +108,17 @@ button:hover{
 	color:#fff;
 }
 
-@media screen and (max-width: 928px) and (min-width: 500px){
+@media screen and (max-width: 752px) {
 	.nav {
 		margin: 0;
 		padding: 0;
-		background-color:lightseagreen;
 		justify-content: space-between;
 		align-items: center;
 		width: 100%;
 		padding: 25px 10%;
 	}
 	
-	li, a, button{
+	a, button{
 		font-family: "Montserrat", sans-serif;
 		font-weight: 500;
 		font-size: 16px;
@@ -130,20 +129,21 @@ button:hover{
 	.logo{
 		cursor: pointer;
 		max-height: 35px;
+		width: 30%;
 	}
 	
 	
 	
-	.nav-link li {
+	.nav-link a {
 		display: inline-block;
-		padding: 25px 20px 0px 20px;
+		padding: 1px 1px 1px 10px;
 	}
 	
-	.nav-link li a {
+	.nav-link a {
 		transition: all 0.3s ease 0s;
 	}
 	
-	.nav-link li a:hover{
+	.nav-link a:hover{
 		color: #f54949;
 	}
 	

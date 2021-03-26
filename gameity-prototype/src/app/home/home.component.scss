@@ -173,3 +173,13 @@ p{
     text-align: center;
     background-color: black;
 }
+
+
+@media screen and (max-width: 752px) {
+    .spacing{
+        height: 30px;
+    }
+    .view{
+        height: 10%;
+    }
+}
