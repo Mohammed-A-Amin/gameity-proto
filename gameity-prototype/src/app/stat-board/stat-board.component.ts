@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiDataService } from '../../shared/services/api-data.service';
 
 @Component({
   selector: 'app-stat-board',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./stat-board.component.scss']
 })
 export class StatBoardComponent implements OnInit {
+  public userList = [];
+  
+  constructor(public _apiService: ApiDataService) { }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit() {
+    this.listenForUserData();
+    // subscribe
+    this._apiService.listOfUsersObs
+    .subscribe((data) =>{
+      this.userList = data;
+    })
+  }
+  listenForUserData() {
+    this._apiService.getAllUsers();
   }
 
 }

@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 
 // Creating a Schema - modeling user input
 const UserInfo = new mongoose.Schema({
-    nameTag: String,
     rank: String,
+    percentile: String,
     avgHrs: String,
     winsPerMatches: String
 });

@@ -26,10 +26,15 @@
 	margin: 7% auto 20px auto;
     padding: 5%;
 	align-items: center;
+    justify-content: center;
     .about-text{
         width: 80%;
         font-size: 20px;
         font-family: 'Montserrat', sans-serif;
+        justify-content: center;
+        img{
+            width: 100%;
+        }
     }
     p{
         font-family: 'Montserrat', sans-serif;
@@ -75,7 +80,7 @@
     
 }
 .box:hover{
-    height: 710px;
+    height: 650px;
 }
 .box .imgBx{
     position: absolute;
@@ -124,7 +129,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background: url(https://steamuserimages-a.akamaihd.net/ugc/931562843186439042/AA7746A03D70CFFBE6AB6F87B45DD3EB0ED6B1C9/);
+    background: url(../../assets/gameity/gamiety-repeat.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -160,13 +165,11 @@ p{
     font-family: 'Monsterrat'
 }
 
-
-.gameitycharity{
-    width: 80%;
-    display: block;
-    border-radius: 100px;
-}
-
 .founders{
     width: 40%;
+}
+.img-bg{
+    width: 100%;
+    text-align: center;
+    background-color: black;
 }

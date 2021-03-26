@@ -68,6 +68,7 @@ server.get('/get-all-users', (req, res) => {
     })
     
 });
+// allows user to create their own user data
 server.post('/add-one-user', (req, res) => {
     const incomingData = req.body;
     const newUserInfo = new UserInfo(incomingData);
@@ -86,6 +87,8 @@ server.post('/add-one-user', (req, res) => {
         });
     });
 });
+
+// used to populate data
 server.post('/add-many-users', (req, res) => {
     // after making the request in postman, you will call data in body 
     const incomingData = req.body.users;
