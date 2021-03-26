@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
-const baseUrl = 'http://localhost:8080';
+const baseUrl = 'https://gameity.herokuapp.com';
 
 @Injectable({
   providedIn: 'root'

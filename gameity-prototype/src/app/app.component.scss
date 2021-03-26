@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 .nav {
     margin: 0;
     padding: 0;
@@ -108,3 +107,54 @@ button:hover{
 	font-size:20px;
 	color:#fff;
 }
+
+@media screen and (max-width: 928px) and (min-width: 500px){
+	.nav {
+		margin: 0;
+		padding: 0;
+		background-color:lightseagreen;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		padding: 25px 10%;
+	}
+	
+	li, a, button{
+		font-family: "Montserrat", sans-serif;
+		font-weight: 500;
+		font-size: 16px;
+		color: #edf0f1;
+		
+	}
+	
+	.logo{
+		cursor: pointer;
+		max-height: 35px;
+	}
+	
+	
+	
+	.nav-link li {
+		display: inline-block;
+		padding: 25px 20px 0px 20px;
+	}
+	
+	.nav-link li a {
+		transition: all 0.3s ease 0s;
+	}
+	
+	.nav-link li a:hover{
+		color: #f54949;
+	}
+	
+	button{
+		width:120px;
+		height: 40px;
+		color:#ffffff;
+		outline:none;
+		border: none;
+		border-radius: 0px;
+		font-family: calibri;
+		background-color:#f54949;
+	}
+  }
