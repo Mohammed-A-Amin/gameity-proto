@@ -87,26 +87,24 @@ server.post('/add-one-user', (req, res) => {
         });
     });
 });
-
-// used to populate data
-server.post('/add-many-users', (req, res) => {
-    // after making the request in postman, you will call data in body 
-    const incomingData = req.body.users;
-    // calling journal model with insertMany property
-    UserInfo.insertMany( incomingData, (err, doc) =>{
-        if(err) {
-            res.status(500).send({
-                status:500,
-                msg: 'Could not add the multiple users.'
-            });
-        }
-        res.status(200).send({
-            status:200,
-            msg: 'Successfully created multiple users at once!',
-            document: doc
-        });
-    }); 
-});
+// server.post('/add-many-users', (req, res) => {
+//     // after making the request in postman, you will call data in body 
+//     const incomingData = req.body.users;
+//     // calling journal model with insertMany property
+//     UserInfo.insertMany( incomingData, (err, doc) =>{
+//         if(err) {
+//             res.status(500).send({
+//                 status:500,
+//                 msg: 'Could not add the multiple users.'
+//             });
+//         }
+//         res.status(200).send({
+//             status:200,
+//             msg: 'Successfully created multiple users at once!',
+//             document: doc
+//         });
+//     }); 
+// });
 
 // Listening on Port 8080
 server.listen(port, () => {
