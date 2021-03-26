@@ -90,65 +90,97 @@ button:hover{
 	background-color:#f54949;
 	transition:all ease 0.5s;
 }
-.social i{
-	font-size:20px;
-	color:#fff;
-<<<<<<< HEAD
+.box .imgBx img{
+    min-width: 100%;
+    opacity: 0.1;
+    transition: 0.5;
 }
-=======
+.box:hover .imgBx img{
+    opacity: 1;
 }
-
+.box:before{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    bottom: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1;
+}
+.box:after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    bottom: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -2 ;
+    filter: blur(40px);
+}
+.wrapper { 
+    opacity: 0.99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-image: url("../assets/gameity/gamiety-repeat.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.box:before,
+.box:after
+{
+    background: linear-gradient(235deg,#F54949,#010615,#F54949);
+}
+.box:nth-child(2):before,
+.box:nth-child(2)::after
+{
+    background: linear-gradient(235deg,#F54949,#010615,#F54949);
+}
+.box .content
+{
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+.box:hover .content 
+{
+    opacity: 1;
+}
+p{
+    font-family: 'Monsterrat'
+}
+.founders{
+    width: 40%;
+}
+.img-bg{
+    width: 100%;
+    text-align: center;
+    background-color: black;
+}
 @media screen and (max-width: 752px) {
-	.nav {
-		margin: 0;
-		padding: 0;
-		justify-content: space-between;
-		align-items: center;
-		width: 100%;
-		padding: 25px 10%;
-	}
-	
-	a, button{
-		font-family: "Montserrat", sans-serif;
-		font-weight: 500;
-		font-size: 16px;
-		color: #edf0f1;
-		
-	}
-	
-	.logo{
-		cursor: pointer;
-		max-height: 35px;
-		width: 30%;
-	}
-	
-	
-	
-	.nav-link a {
-		display: inline-block;
-		padding: 1px 1px 1px 10px;
-	}
-	
-	.nav-link a {
-		transition: all 0.3s ease 0s;
-	}
-	
-	.nav-link a:hover{
-		color: #f54949;
-	}
-	
-	button{
-		width:120px;
-		height: 40px;
-		color:#ffffff;
-		outline:none;
-		border: none;
-		border-radius: 0px;
-		font-family: calibri;
-		background-color:#f54949;
-	}
-	.social{
-		display: none;
-	}
-  }
->>>>>>> home
+    .spacing{
+        height: 170px;
+    }
+    .wrapper{
+        width: 100%;
+    }
+    .box .content{
+        position: absolute;
+        width: 80%;
+        height: 75%;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    .box:hover{
+       height: 850px;
+    }
+}
