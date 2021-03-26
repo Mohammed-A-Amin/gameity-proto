@@ -209,7 +209,29 @@ $cubic-slow: cubic-bezier(0.7, 0.01, 0.37, 1);
 
 @media screen and (max-width: 752px) {
   .spacing{
-    height: 150px;
+    height: 170px;
   }
-  
+  .card {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 500px;
+    min-height: 500px;
+    width: 50%;
+    height: 200px;
+    padding: 20px;
+    margin: 100px 0 0 0;
+    .card__content {
+      .card__content--description {
+        background: #ffffffe6;
+        position: absolute;
+        padding: 20px;
+        bottom: -100px;
+        margin-right: -170px;
+        text-align: left;
+        max-width: 300px;
+      }
+    }
+  }
 }
