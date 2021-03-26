@@ -1,4 +1,4 @@
-$border-radius-size: 14px;
+$border-radius-size: 0px;
 $red: #f54949;
 
 .container{
@@ -52,7 +52,7 @@ $red: #f54949;
   text-align: center;
   justify-content: center;
   img {
-    width: 300px;
+    width: 200px;
   }
 }
 
@@ -102,4 +102,27 @@ $red: #f54949;
     border-right: none;
     border-bottom-right-radius: $border-radius-size;
   }
+}
+
+@media screen and (max-width: 752px) {
+  .spacing{
+    height: 180px;
+  }
+  .game-card {
+    background: white;
+    width: 300px;
+    min-height: 700px;
+    max-height: 700px;
+    display: block;
+    float: left;
+    border-radius: $border-radius-size;
+    text-align: center;
+    box-shadow: -1px 15px 30px -12px black;
+    margin: 100px 0px;
+  }
+  .card-bg{
+    img {
+      width: 230px !important;
+    }
+  }  
 }

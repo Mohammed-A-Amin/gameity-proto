@@ -12,9 +12,9 @@
 .carousel-control{
     opacity: 0;
 }
-
-
-
+.myCarousel{
+    width: 100%;
+}
 
 // content container
 .about-container{
@@ -63,8 +63,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    min-height: 100vh;
-    
+    min-height: 100vh; 
 }
 
 .box{
@@ -149,7 +148,6 @@
     position: absolute;
     bottom: 0;
     background: rgba(0,0,0,0.4);
-
     align-items: center;
     text-align: center;
     opacity: 0;
@@ -172,4 +170,25 @@ p{
     width: 100%;
     text-align: center;
     background-color: black;
+}
+
+
+@media screen and (max-width: 752px) {
+    .spacing{
+        height: 170px;
+    }
+    .wrapper{
+        width: 100%;
+    }
+    .box .content{
+        position: absolute;
+        width: 80%;
+        height: 75%;
+        padding: 0px;
+        box-sizing: border-box;
+        
+    }
+    .box:hover{
+       height: 850px;
+    }
 }

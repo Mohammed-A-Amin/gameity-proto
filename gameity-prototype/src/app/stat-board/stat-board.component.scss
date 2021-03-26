@@ -68,6 +68,9 @@
     margin: auto;
     display: block;
   }
+  p{
+    padding: 10px;
+  }
 }
 ul{
   list-style-type: none;
@@ -82,4 +85,21 @@ ul{
   color: black;
   padding: 10px;
   margin: 30px;
+}
+
+
+@media screen and (max-width: 752px) {
+  .spacing{
+      height: 180px;
+  }
+  .rank-list-card{
+    width: 90%;
+    height: 70px;
+    font-size: 15px;
+    text-align: center;
+    background-color: white;
+    color: black;
+    padding: 5px;
+    margin: 10px;
+  }
 }
